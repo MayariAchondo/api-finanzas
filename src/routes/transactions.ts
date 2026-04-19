@@ -41,8 +41,7 @@ const body = await c.req.json() as Omit<Transaction, 'id'>
   }
 
   data.transactions.push(newTransaction)
-  data.counter.nextId++
-
+  
   return c.json(newTransaction, 201)
 })
 
